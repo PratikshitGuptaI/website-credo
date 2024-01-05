@@ -1162,7 +1162,24 @@ Credo transforms hospitality with impactful digital signage solutions, streamlin
   </div>
   <!--======//  grids  //======-->
   <!-- <script src="https://rss2json.com/gfapi.js"></script> -->
+<script>
+  // Function to load HTML content dynamically
+  function loadHTML(url, containerId) {
+    var container = document.getElementById(containerId);
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        container.innerHTML = xhr.responseText;
+      }
+    };
+    xhr.send();
+  }
 
+  // Load header and footer
+  loadHTML('header.html', 'headerContainer');
+  loadHTML('footer.html', 'footerContainer');
+</script>
   <script src="assets/js/vendor.min.js"></script>
 
    <script src="assets/js/header.min.js"></script>
@@ -1568,24 +1585,7 @@ jQuery(window).on("load", function () {
 <script type="text/javascript" id="hs-script-loader" async defer src="../js.hs-scripts.com/5993138.js"></script>
 <!-- End of HubSpot Embed Code -->
 </body>
-<script>
-  // Function to load HTML content dynamically
-  function loadHTML(url, containerId) {
-    var container = document.getElementById(containerId);
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        container.innerHTML = xhr.responseText;
-      }
-    };
-    xhr.send();
-  }
 
-  // Load header and footer
-  loadHTML('header.html', 'headerContainer');
-  loadHTML('footer.html', 'footerContainer');
-</script>
 
 <!-- Mirrored from www.cloudnowtech.com/industries.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Dec 2023 06:47:04 GMT -->
 </html>
